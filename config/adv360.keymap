@@ -5,6 +5,11 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
+&mmv {
+    delay-ms = <10>;
+    time-to-max-speed-ms = <20>;
+    acceleration-exponent = <1>;
+};
 
 / {
     behaviors {
