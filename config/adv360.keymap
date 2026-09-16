@@ -28,7 +28,7 @@
 
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <175>;
+            tapping-term-ms = <200>;
         };
     };
 
@@ -38,11 +38,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&auto_shift LS(EQUAL) EQUAL  &auto_shift LS(N1) N1        &auto_shift LS(N2) N2  &auto_shift LS(N3) N3  &auto_shift LS(N4) N4  &auto_shift LS(N5) N5  &tog 1                                                                           &mo 3      &auto_shift LS(N6) N6  &auto_shift LS(N7) N7  &auto_shift LS(N8) N8        &auto_shift LS(N9) N9              &auto_shift LS(N0) N0               &auto_shift LS(MINUS) MINUS
-&kp ESC                      &auto_shift LS(Q) Q          &auto_shift LS(W) W    &auto_shift LS(E) E    &auto_shift LS(R) R    &auto_shift LS(T) T    &mt LC(LS(LA(V))) LC(V)                                                          &kp RC(A)  &auto_shift LS(Y) Y    &auto_shift LS(U) U    &auto_shift LS(I) I          &auto_shift LS(O) O                &auto_shift LS(P) P                 &auto_shift LS(BSLH) BSLH
-&kp TAB                      &auto_shift LS(A) A          &auto_shift LS(S) S    &auto_shift LS(D) D    &auto_shift LS(F) F    &auto_shift LS(G) G    &mt LC(X) LC(C)          &kp LCTRL           &kp LALT      &kp LGUI   &kp RCTRL  &kp RC(Z)  &auto_shift LS(H) H    &auto_shift LS(J) J    &auto_shift LS(K) K          &auto_shift LS(L) L                &auto_shift LS(SEMI) SEMI           &auto_shift LS(SQT) SQT
-&kp LSHFT                    &auto_shift LS(Z) Z          &auto_shift LS(X) X    &auto_shift LS(C) C    &auto_shift LS(V) V    &auto_shift LS(B) B                                                 &kp HOME      &kp PG_UP                        &auto_shift LS(N) N    &auto_shift LS(M) M    &auto_shift LS(COMMA) COMMA  &auto_shift LS(DOT) PERIOD         &auto_shift LS(FSLH) SLASH          &kp RSHFT
-&tog 4                       &auto_shift LS(GRAVE) GRAVE  &kp CAPS               &kp LEFT               &kp RIGHT                                     &mt LC(BSPC) BACKSPACE   &mt LC(DEL) DELETE  &kp END       &kp PG_DN  &kp ENTER  &kp SPACE                         &kp UP                 &kp DOWN                     &auto_shift LS(LBKT) LEFT_BRACKET  &auto_shift LS(RBKT) RIGHT_BRACKET  &mo 2
+&auto_shift LS(EQUAL) EQUAL  &auto_shift LS(N1) N1        &auto_shift LS(N2) N2  &auto_shift LS(N3) N3  &auto_shift LS(N4) N4  &auto_shift LS(N5) N5  &tog 1                                                                            &mo 3      &auto_shift LS(N6) N6  &auto_shift LS(N7) N7  &auto_shift LS(N8) N8        &auto_shift LS(N9) N9              &auto_shift LS(N0) N0               &auto_shift LS(MINUS) MINUS
+&kp ESC                      &auto_shift LS(Q) Q          &auto_shift LS(W) W    &auto_shift LS(E) E    &auto_shift LS(R) R    &auto_shift LS(T) T    &mt LC(LS(LA(V))) LC(V)                                                           &kp RC(A)  &auto_shift LS(Y) Y    &auto_shift LS(U) U    &auto_shift LS(I) I          &auto_shift LS(O) O                &auto_shift LS(P) P                 &auto_shift LS(BSLH) BSLH
+&kp TAB                      &auto_shift LS(A) A          &auto_shift LS(S) S    &auto_shift LS(D) D    &auto_shift LS(F) F    &auto_shift LS(G) G    &mt LC(X) LC(C)          &kp LCTRL           &kp LALT       &kp LGUI   &kp RCTRL  &kp RC(Z)  &auto_shift LS(H) H    &auto_shift LS(J) J    &auto_shift LS(K) K          &auto_shift LS(L) L                &auto_shift LS(SEMI) SEMI           &auto_shift LS(SQT) SQT
+&kp LSHFT                    &auto_shift LS(Z) Z          &auto_shift LS(X) X    &auto_shift LS(C) C    &auto_shift LS(V) V    &auto_shift LS(B) B                                                 &kp HOME       &kp PG_UP                        &auto_shift LS(N) N    &auto_shift LS(M) M    &auto_shift LS(COMMA) COMMA  &auto_shift LS(DOT) PERIOD         &auto_shift LS(FSLH) SLASH          &kp RSHFT
+&tog 4                       &auto_shift LS(GRAVE) GRAVE  &kp CAPS               &kp LEFT               &kp RIGHT                                     &mt LC(BSPC) BACKSPACE   &mt LC(DEL) DELETE  &lt 4 END      &kp PG_DN  &kp ENTER  &kp SPACE                         &kp UP                 &kp DOWN                     &auto_shift LS(LBKT) LEFT_BRACKET  &auto_shift LS(RBKT) RIGHT_BRACKET  &mo 2
             >;
         };
 
@@ -84,8 +84,8 @@
 &trans          &trans  &trans     &trans          &trans             &trans            &trans                                                                                          &trans     &trans      &trans          &trans          &trans            &trans           &trans
 &kp ESC         &trans  &mkp MCLK  &msc SCRL_UP    &kp C_VOLUME_UP    &trans            &mt LC(LS(LA(V))) LC(V)                                                                         &kp RC(A)  &kp LG(E)   &kp C_AC_BACK   &mmv MOVE_UP    &kp C_AC_FORWARD  &kp PRINTSCREEN  &trans
 &kp TAB         &trans  &trans     &msc SCRL_DOWN  &kp C_VOLUME_DOWN  &kp C_PLAY_PAUSE  &mt LC(X) LC(C)              &kp LCTRL              &kp LEFT_ALT      &kp LEFT_GUI   &kp RCTRL  &kp RC(Z)  &trans      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT   &mkp RCLK        &trans
-&kp LEFT_SHIFT  &trans  &trans     &trans          &kp K_MUTE         &kp C_PREVIOUS                                                        &kp HOME          &kp PAGE_UP                          &kp C_NEXT  &trans          &trans          &trans            &trans           &kp RIGHT_SHIFT
-&trans          &trans  &trans     &kp LEFT        &kp RIGHT                            &mt LC(BACKSPACE) BACKSPACE  &mt LC(DELETE) DELETE  &kp END           &kp PAGE_DOWN  &kp ENTER  &mkp LCLK              &kp UP          &kp DOWN        &trans            &trans           &mo 2
+&kp LEFT_SHIFT  &trans  &trans     &trans          &kp K_MUTE         &kp C_PREVIOUS                                                        &trans            &kp PAGE_UP                          &kp C_NEXT  &trans          &trans          &trans            &trans           &kp RIGHT_SHIFT
+&trans          &trans  &trans     &kp LEFT        &kp RIGHT                            &mt LC(BACKSPACE) BACKSPACE  &mt LC(DELETE) DELETE  &trans            &kp PAGE_DOWN  &kp ENTER  &mkp LCLK              &kp UP          &kp DOWN        &trans            &trans           &mo 2
             >;
         };
 
