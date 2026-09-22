@@ -115,7 +115,7 @@
         Spelling_Menu: Spelling_Menu {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT &kp LEFT &kp C_MENU>;
+            bindings = <&kp LEFT &kp LEFT &kp K_CONTEXT_MENU>;
             label = "SPELLING_MENU";
         };
     };
@@ -170,7 +170,7 @@
         Mouse {
             bindings = <
 &trans          &trans          &trans             &trans           &trans           &trans            &trans                                                                          &trans     &trans      &trans          &trans          &trans            &trans           &trans
-&kp ESC         &trans          &mkp MCLK          &msc SCRL_UP     &mkp MB4         &kp C_PLAY        &mt LC(LS(LA(V))) LC(V)                                                         &kp RC(A)  &kp LG(E)   &kp C_AC_BACK   &mmv MOVE_UP    &kp C_AC_FORWARD  &kp PRINTSCREEN  &kp C_BRIGHTNESS_INC
+&kp ESC         &trans          &mkp MCLK          &msc SCRL_UP     &mkp MB4         &trans            &mt LC(LS(LA(V))) LC(V)                                                         &kp RC(A)  &kp LG(E)   &kp C_AC_BACK   &mmv MOVE_UP    &kp C_AC_FORWARD  &kp PRINTSCREEN  &kp C_BRIGHTNESS_INC
 &mkp MB5        &kp LEFT_SHIFT  &msc SCRL_LEFT     &msc SCRL_DOWN   &msc SCRL_RIGHT  &kp C_PLAY_PAUSE  &mt LC(X) LC(C)          &kp LCTRL  &kp LEFT_ALT      &kp LEFT_GUI   &kp RCTRL  &kp RC(Z)  &trans      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT   &mkp RCLK        &kp C_BRIGHTNESS_DEC
 &kp LEFT_SHIFT  &trans          &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_MUTE       &kp C_PREVIOUS                                        &trans            &kp PAGE_UP                          &kp C_NEXT  &trans          &trans          &trans            &trans           &kp RIGHT_SHIFT
 &trans          &trans          &trans             &kp LEFT         &kp RIGHT                          &trans                   &trans     &trans            &kp PAGE_DOWN  &kp ENTER  &mkp LCLK              &kp UP          &kp DOWN        &trans            &trans           &mo 2
