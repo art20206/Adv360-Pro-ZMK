@@ -41,28 +41,107 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        Enter {
+            bindings = <&kp ENTER>;
+            key-positions = <41 42>;
+        };
+
+        Tab {
+            bindings = <&kp TAB>;
+            key-positions = <41 42 43>;
+        };
+
+        Comma_Space {
+            bindings = <&Comma_Space>;
+            key-positions = <41 70>;
+        };
+
+        Period_Space {
+            bindings = <&Period_Space>;
+            key-positions = <41 42 70>;
+        };
+
+        Period_Enter {
+            bindings = <&Period_Enter>;
+            key-positions = <70 41 42 43>;
+        };
+
+        ArrowKeys_Layer {
+            bindings = <&mo 5>;
+            key-positions = <32 31>;
+        };
+
+        Escape {
+            bindings = <&kp ESC>;
+            key-positions = <32 31 30>;
+        };
+
+        Spelling_Menu {
+            bindings = <&Spelling_Menu>;
+            key-positions = <32 31 30 29>;
+        };
+
+        Mouse_Layer {
+            bindings = <&tog 4>;
+            key-positions = <65 70>;
+        };
+    };
+
+    macros {
+        Comma_Space: Comma_Space {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA &kp SPACE>;
+            label = "COMMA_SPACE";
+        };
+
+        Period_Space: Period_Space {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PERIOD &kp SPACE>;
+            label = "PERIOD_SPACE";
+        };
+
+        Period_Enter: Period_Enter {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PERIOD &kp ENTER>;
+            label = "PERIOD_ENTER";
+        };
+
+        Spelling_Menu: Spelling_Menu {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT &kp LEFT &kp C_MENU>;
+            label = "SPELLING_MENU";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             display-name = "Base";
             bindings = <
-&auto_shift LS(EQUAL) EQUAL  &auto_shift LS(N1) N1        &auto_shift LS(N2) N2  &auto_shift LS(N3) N3  &auto_shift LS(N4) N4  &auto_shift LS(N5) N5  &tog 1                                                                            &mo 3      &auto_shift LS(N6) N6  &auto_shift LS(N7) N7  &auto_shift LS(N8) N8        &auto_shift LS(N9) N9              &auto_shift LS(N0) N0               &auto_shift LS(MINUS) MINUS
-&kp ESC                      &auto_shift LS(Q) Q          &auto_shift LS(W) W    &auto_shift LS(E) E    &auto_shift LS(R) R    &auto_shift LS(T) T    &mt LC(LS(LA(V))) LC(V)                                                           &kp RC(A)  &auto_shift LS(Y) Y    &auto_shift LS(U) U    &auto_shift LS(I) I          &auto_shift LS(O) O                &auto_shift LS(P) P                 &auto_shift LS(BSLH) BSLH
-&kp TAB                      &auto_shift LS(A) A          &auto_shift LS(S) S    &auto_shift LS(D) D    &auto_shift LS(F) F    &auto_shift LS(G) G    &mt LC(X) LC(C)          &kp LCTRL           &kp LALT       &kp LGUI   &kp RCTRL  &kp RC(Z)  &auto_shift LS(H) H    &auto_shift LS(J) J    &auto_shift LS(K) K          &auto_shift LS(L) L                &auto_shift LS(SEMI) SEMI           &auto_shift LS(SQT) SQT
-&kp LSHFT                    &auto_shift LS(Z) Z          &auto_shift LS(X) X    &auto_shift LS(C) C    &auto_shift LS(V) V    &auto_shift LS(B) B                                                 &kp HOME       &kp PG_UP                        &auto_shift LS(N) N    &auto_shift LS(M) M    &auto_shift LS(COMMA) COMMA  &auto_shift LS(DOT) PERIOD         &auto_shift LS(FSLH) SLASH          &kp RSHFT
-&tog 4                       &auto_shift LS(GRAVE) GRAVE  &kp CAPS               &kp LEFT               &kp RIGHT                                     &mt LC(BSPC) BACKSPACE   &mt LC(DEL) DELETE  &lt 4 END      &kp PG_DN  &kp ENTER  &kp SPACE                         &kp UP                 &kp DOWN                     &auto_shift LS(LBKT) LEFT_BRACKET  &auto_shift LS(RBKT) RIGHT_BRACKET  &mo 2
+&auto_shift LS(EQUAL) EQUAL  &auto_shift LS(N1) N1        &auto_shift LS(N2) N2  &auto_shift LS(N3) N3  &auto_shift LS(N4) N4  &auto_shift LS(N5) N5  &tog 1                                                                              &mo 3      &auto_shift LS(N6) N6  &auto_shift LS(N7) N7  &auto_shift LS(N8) N8        &auto_shift LS(N9) N9              &auto_shift LS(N0) N0               &auto_shift LS(MINUS) MINUS
+&kp ESC                      &auto_shift LS(Q) Q          &auto_shift LS(W) W    &auto_shift LS(E) E    &auto_shift LS(R) R    &auto_shift LS(T) T    &mt LC(LS(LA(V))) LC(V)                                                             &kp RC(A)  &auto_shift LS(Y) Y    &auto_shift LS(U) U    &auto_shift LS(I) I          &auto_shift LS(O) O                &auto_shift LS(P) P                 &auto_shift LS(BSLH) BSLH
+&kp TAB                      &auto_shift LS(A) A          &auto_shift LS(S) S    &auto_shift LS(D) D    &auto_shift LS(F) F    &auto_shift LS(G) G    &mt LC(X) LC(C)          &kp LCTRL              &kp LALT      &kp LGUI   &kp RCTRL  &kp RC(Z)  &auto_shift LS(H) H    &auto_shift LS(J) J    &auto_shift LS(K) K          &auto_shift LS(L) L                &auto_shift LS(SQT) SQT             &auto_shift LS(SEMICOLON) SEMICOLON
+&kp LSHFT                    &auto_shift LS(Z) Z          &auto_shift LS(X) X    &auto_shift LS(C) C    &auto_shift LS(V) V    &auto_shift LS(B) B                                                    &kp HOME      &kp PG_UP                        &auto_shift LS(N) N    &auto_shift LS(M) M    &auto_shift LS(COMMA) COMMA  &auto_shift LS(DOT) PERIOD         &auto_shift LS(FSLH) SLASH          &kp RSHFT
+&tog 4                       &auto_shift LS(GRAVE) GRAVE  &kp CAPS               &kp LEFT               &kp RIGHT                                     &mt LC(BSPC) BACKSPACE   &mt LC(DELETE) DELETE  &kp END       &kp PG_DN  &kp ENTER  &kp SPACE                         &kp UP                 &kp DOWN                     &auto_shift LS(LBKT) LEFT_BRACKET  &auto_shift LS(RBKT) RIGHT_BRACKET  &mo 2
             >;
         };
 
         keypad {
             display-name = "Kp";
             bindings = <
-&kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &trans                                                   &mo 3      &kp N6  &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp MINUS
-&kp ESC    &kp Q      &kp W     &kp E     &kp R      &kp T   &none                                                    &none      &kp Y   &kp KP_N7   &kp KP_N8     &kp KP_N9      &kp KP_MINUS     &kp BSLH
-&kp TAB    &kp A      &kp S     &kp D     &kp F      &kp G   &none     &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp H   &kp KP_N4   &kp KP_N5     &kp KP_N6      &kp KP_PLUS      &kp SQT
-&kp LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B                        &kp HOME      &kp PG_UP                        &kp N   &kp KP_N1   &kp KP_N2     &kp KP_N3      &kp KP_ENTER     &kp RSHFT
-&mo 2      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &kp BSPC  &kp DEL    &kp END       &kp PG_DN  &kp ENTER  &kp KP_N0          &kp UP      &kp DOWN      &kp KP_DOT     &kp RBKT         &mo 2
+&kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &trans                                                 &mo 3      &kp N6  &kp KP_NUM  &kp KP_EQUAL  &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp MINUS
+&kp ESC    &kp Q      &kp W     &kp E     &kp R      &kp T   &none                                                  &none      &kp Y   &kp KP_N7   &kp KP_N8     &kp KP_N9      &kp KP_MINUS     &kp BSLH
+&kp TAB    &kp A      &kp S     &kp D     &kp F      &kp G   &none   &kp LCTRL  &kp LALT      &kp LGUI   &kp RCTRL  &none      &kp H   &kp KP_N4   &kp KP_N5     &kp KP_N6      &kp KP_PLUS      &kp SQT
+&kp LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B                      &kp HOME      &kp PG_UP                        &kp N   &kp KP_N1   &kp KP_N2     &kp KP_N3      &kp KP_ENTER     &kp RSHFT
+&mo 2      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &trans  &trans     &kp END       &kp PG_DN  &kp ENTER  &kp KP_N0          &kp UP      &kp DOWN      &kp KP_DOT     &kp RBKT         &mo 2
             >;
         };
 
@@ -90,11 +169,21 @@
 
         Mouse {
             bindings = <
-&trans          &trans  &trans     &trans          &trans             &trans            &trans                                                                                          &trans     &trans      &trans          &trans          &trans            &trans           &trans
-&kp ESC         &trans  &mkp MCLK  &msc SCRL_UP    &kp C_VOLUME_UP    &trans            &mt LC(LS(LA(V))) LC(V)                                                                         &kp RC(A)  &kp LG(E)   &kp C_AC_BACK   &mmv MOVE_UP    &kp C_AC_FORWARD  &kp PRINTSCREEN  &trans
-&kp TAB         &trans  &trans     &msc SCRL_DOWN  &kp C_VOLUME_DOWN  &kp C_PLAY_PAUSE  &mt LC(X) LC(C)              &kp LCTRL              &kp LEFT_ALT      &kp LEFT_GUI   &kp RCTRL  &kp RC(Z)  &trans      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT   &mkp RCLK        &trans
-&kp LEFT_SHIFT  &trans  &trans     &trans          &kp C_MUTE         &kp C_PREVIOUS                                                        &trans            &kp PAGE_UP                          &kp C_NEXT  &trans          &trans          &trans            &trans           &kp RIGHT_SHIFT
-&trans          &trans  &trans     &kp LEFT        &kp RIGHT                            &mt LC(BACKSPACE) BACKSPACE  &mt LC(DELETE) DELETE  &trans            &kp PAGE_DOWN  &kp ENTER  &mkp LCLK              &kp UP          &kp DOWN        &trans            &trans           &mo 2
+&trans          &trans          &trans             &trans           &trans           &trans            &trans                                                                          &trans     &trans      &trans          &trans          &trans            &trans           &trans
+&kp ESC         &trans          &mkp MCLK          &msc SCRL_UP     &mkp MB4         &kp C_PLAY        &mt LC(LS(LA(V))) LC(V)                                                         &kp RC(A)  &kp LG(E)   &kp C_AC_BACK   &mmv MOVE_UP    &kp C_AC_FORWARD  &kp PRINTSCREEN  &kp C_BRIGHTNESS_INC
+&mkp MB5        &kp LEFT_SHIFT  &msc SCRL_LEFT     &msc SCRL_DOWN   &msc SCRL_RIGHT  &kp C_PLAY_PAUSE  &mt LC(X) LC(C)          &kp LCTRL  &kp LEFT_ALT      &kp LEFT_GUI   &kp RCTRL  &kp RC(Z)  &trans      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT   &mkp RCLK        &kp C_BRIGHTNESS_DEC
+&kp LEFT_SHIFT  &trans          &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_MUTE       &kp C_PREVIOUS                                        &trans            &kp PAGE_UP                          &kp C_NEXT  &trans          &trans          &trans            &trans           &kp RIGHT_SHIFT
+&trans          &trans          &trans             &kp LEFT         &kp RIGHT                          &trans                   &trans     &trans            &kp PAGE_DOWN  &kp ENTER  &mkp LCLK              &kp UP          &kp DOWN        &trans            &trans           &mo 2
+            >;
+        };
+
+        ArrowKeys {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans             &trans             &trans    &trans               &trans           &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                      &trans  &trans             &trans             &kp UP    &trans               &trans           &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &mt LS(HOME) HOME  &mt LC(LEFT) LEFT  &kp DOWN  &mt LC(RIGHT) RIGHT  &mt LS(END) END  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &trans             &trans             &trans    &trans               &trans           &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans                     &trans             &trans    &trans               &trans           &trans
             >;
         };
 
