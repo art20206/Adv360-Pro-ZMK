@@ -138,11 +138,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&auto_shift LS(EQUAL) EQUAL  &auto_shift LS(N1) N1  &auto_shift LS(N2) N2  &auto_shift LS(N3) N3  &auto_shift LS(N4) N4  &auto_shift LS(N5) N5  &tog 1                                                                                                                                              &mo 3          &auto_shift LS(N6) N6  &auto_shift LS(N7) N7  &auto_shift LS(N8) N8  &auto_shift LS(N9) N9  &auto_shift LS(N0) N0  &auto_shift LS(MINUS) MINUS
-&kp ESC                      &kp Q                  &kp W                  &kp E                  &kp R                  &kp T                  &mt LC(LS(LA(V))) LC(V)                                                                                                                             &kp LC(LS(Z))  &kp Y                  &kp U                  &kp I                  &kp O                  &kp P                  &kp BSLH
-&kp TAB                      &kp A                  &kp S                  &kp D                  &kp F                  &kp G                  &mt LC(X) LC(C)                           &kp LEFT_CONTROL  &kp LALT                             &kp RIGHT_ALT                   &kp RIGHT_CONTROL  &kp LC(Z)      &kp H                  &kp J                  &kp K                  &kp L                  &kp SQT                &kp SEMICOLON
-&kp LSHFT                    &kp Z                  &kp X                  &kp C                  &kp V                  &kp B                                                                              &kp LEFT_CONTROL                     &kp RIGHT_CONTROL                                                 &kp N                  &kp M                  &kp COMMA              &kp DOT                &kp LS(FSLH)           &kp RSHFT
-&tog 2                       &kp GRAVE              &kp CAPS               &kp LEFT               &kp RIGHT                                     &BackspaceDelete LC(BACKSPACE) BACKSPACE  &EnterTab 4 TAB   &LShift_SpellCheck LEFT_SHIFT 0      &RShift_Esc RIGHT_SHIFT ESCAPE  &EnterTab 5 ENTER  &kp SPACE                             &kp UP                 &kp DOWN               &kp LBKT               &kp RBKT               &mo 2
+&auto_shift LS(EQUAL) EQUAL  &auto_shift LS(N1) N1  &auto_shift LS(N2) N2  &auto_shift LS(N3) N3  &auto_shift LS(N4) N4  &auto_shift LS(N5) N5  &tog 1                                                                                                                  &mo 3          &auto_shift LS(N6) N6  &auto_shift LS(N7) N7  &auto_shift LS(N8) N8  &auto_shift LS(N9) N9  &auto_shift LS(N0) N0  &auto_shift LS(MINUS) MINUS
+&kp ESC                      &kp Q                  &kp W                  &kp E                  &kp R                  &kp T                  &mt LC(LS(LA(V))) LC(V)                                                                                                 &kp LC(LS(Z))  &kp Y                  &kp U                  &kp I                  &kp O                  &kp P                  &kp BSLH
+&kp TAB                      &kp A                  &kp S                  &kp D                  &kp F                  &kp G                  &mt LC(X) LC(C)                           &kp LEFT_CONTROL  &kp LALT              &kp LEFT_GUI       &kp RIGHT_CONTROL  &kp LC(Z)      &kp H                  &kp J                  &kp K                  &kp L                  &kp SQT                &kp SEMICOLON
+&kp LSHFT                    &kp Z                  &kp X                  &kp C                  &kp V                  &kp B                                                                              &kp LEFT_CONTROL      &kp RIGHT_CONTROL                                    &kp N                  &kp M                  &kp COMMA              &kp DOT                &kp LS(FSLH)           &kp RSHFT
+&tog 2                       &kp GRAVE              &kp CAPS               &kp LEFT               &kp RIGHT                                     &BackspaceDelete LC(BACKSPACE) BACKSPACE  &EnterTab 4 TAB   &kp LEFT_SHIFT        &kp RIGHT_SHIFT    &EnterTab 5 ENTER  &kp SPACE                             &kp UP                 &kp DOWN               &kp LBKT               &kp RBKT               &mo 2
             >;
         };
 
@@ -181,7 +181,7 @@
 
         Mouse {
             bindings = <
-&trans  &trans    &trans          &trans             &trans           &trans            &trans                                      &trans     &trans      &trans           &trans          &trans           &mt LS(F11) F11  &trans
+&kp F1  &kp F2    &kp F3          &kp F4             &kp F5           &kp F6            &trans                                      &trans     &kp F7      &kp F8           &kp F9          &kp F10          &mt LS(F11) F11  &kp F12
 &trans  &kp F5    &mkp MCLK       &msc SCRL_UP       &mkp MB4         &kp C_PREVIOUS    &trans                                      &trans     &kp C_NEXT  &kp K_BACK       &mmv MOVE_UP    &kp K_FORWARD    &kp PRINTSCREEN  &kp C_BRIGHTNESS_INC
 &trans  &mkp MB5  &msc SCRL_LEFT  &msc SCRL_DOWN     &msc SCRL_RIGHT  &kp C_PLAY_PAUSE  &trans  &trans  &trans      &trans  &trans  &trans     &kp LG(E)   &mmv MOVE_LEFT   &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mkp RCLK        &kp C_BRIGHTNESS_DEC
 &trans  &trans    &kp C_MUTE      &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans                            &trans      &trans                     &trans      &kp LS(LC(TAB))  &trans          &kp LC(TAB)      &trans           &trans
@@ -191,11 +191,11 @@
 
         ArrowKeys {
             bindings = <
-&trans  &trans            &trans             &trans          &trans           &trans              &trans                                                                  &trans  &trans        &trans             &kp LS(LC(UP))     &trans               &trans               &trans
-&trans  &trans            &trans             &kp PAGE_UP     &trans           &trans              &trans                                                                  &trans  &trans        &trans             &mt LC(UP) UP      &trans               &trans               &trans
-&trans  &trans            &mt LS(HOME) HOME  &kp PAGE_DOWN   &mt LS(END) END  &trans              &trans  &trans                              &trans      &trans  &trans  &trans  &kp LS(LEFT)  &mt LC(LEFT) LEFT  &mt LC(DOWN) DOWN  &mt LC(RIGHT) RIGHT  &kp LS(RIGHT_ARROW)  &trans
-&trans  &kp LEFT_CONTROL  &kp LEFT_ALT       &kp LEFT_SHIFT  &kp LEFT_WIN     &kp K_CONTEXT_MENU                                              &trans      &trans                  &trans        &trans             &kp LS(LC(DOWN))   &trans               &trans               &trans
-&trans  &trans            &trans             &trans          &trans                               &trans  &BackspaceDelete LC(DELETE) DELETE  &trans      &trans  &trans  &trans                &trans             &trans             &trans               &trans               &trans
+&trans  &none         &none           &none           &none         &none               &trans                                                                     &trans  &none              &none              &kp LS(LC(UP))     &none                &mt LS(F11) F11  &trans
+&trans  &trans        &Spelling_Menu  &trans          &trans        &trans              &trans                                                                     &trans  &trans             &trans             &mt LC(UP) UP      &trans               &trans           &trans
+&trans  &kp LEFT_ALT  &trans          &trans          &trans        &trans              &trans                              &trans     &trans      &trans  &trans  &trans  &mt LS(HOME) HOME  &mt LC(LEFT) LEFT  &mt LC(DOWN) DOWN  &mt LC(RIGHT) RIGHT  &mt LS(END) END  &trans
+&trans  &kp LEFT_ALT  &kp LCTRL       &kp LEFT_SHIFT  &kp LEFT_WIN  &kp K_CONTEXT_MENU                                                 &trans      &trans                  &trans             &trans             &kp LS(LC(DOWN))   &trans               &trans           &trans
+&trans  &trans        &trans          &trans          &trans                            &BackspaceDelete LC(DELETE) DELETE  &kp ENTER  &trans      &trans  &trans  &trans                     &kp PAGE_UP        &kp PAGE_DOWN      &trans               &trans           &trans
             >;
         };
 
