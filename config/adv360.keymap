@@ -102,7 +102,7 @@
         Sticky_Key: Sticky_Key {
             compatible = "zmk,behavior-sticky-key";
             label = "STICKY_KEY";
-            bindings = <&kp>;
+            bindings = <&sk>;
             #binding-cells = <1>;
             quick-release;
             release-after-ms = <1000>;
