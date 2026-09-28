@@ -56,9 +56,7 @@
 
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            require-prior-idle-ms = <150>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <175>;
+            tapping-term-ms = <150>;
         };
 
         Space_Tab: Space_Tab {
@@ -114,30 +112,30 @@
 
         Spelling_Menu {
             bindings = <&Spelling_Menu>;
-            key-positions = <>;
-            timeout-ms = <50>;
+            key-positions = <71 72>;
+            timeout-ms = <40>;
             require-prior-idle-ms = <150>;
         };
 
         CapsWord {
             bindings = <&caps_word>;
-            key-positions = <32 41>;
+            key-positions = <32 31>;
             layers = <0>;
             require-prior-idle-ms = <150>;
-            timeout-ms = <50>;
+            timeout-ms = <40>;
         };
 
         Hyphen {
             bindings = <&kp MINUS>;
             key-positions = <41 42>;
             layers = <0>;
-            timeout-ms = <50>;
+            timeout-ms = <40>;
             require-prior-idle-ms = <150>;
         };
 
         StickyShift {
             bindings = <&sk LEFT_SHIFT>;
-            key-positions = <31 32>;
+            key-positions = <>;
             timeout-ms = <50>;
             require-prior-idle-ms = <150>;
             layers = <0>;
@@ -159,11 +157,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&auto_shift LS(EQUAL) EQUAL  &auto_shift LS(N1) N1  &auto_shift LS(N2) N2  &auto_shift LS(N3) N3  &auto_shift LS(N4) N4  &auto_shift LS(N5) N5  &tog 1                                                                                           &mo 3               &auto_shift LS(N6) N6  &auto_shift LS(N7) N7  &auto_shift LS(N8) N8  &auto_shift LS(N9) N9  &auto_shift LS(N0) N0  &auto_shift LS(MINUS) MINUS
-&kp TAB                      &kp Q                  &kp W                  &kp E                  &kp R                  &kp T                  &kp LC(S)                                                                                        &tog 4              &kp Y                  &kp U                  &kp I                  &kp O                  &kp P                  &kp BSLH
-&kp ESCAPE                   &kp A                  &kp S                  &kp D                  &kp F                  &kp G                  &kp LC(Z)               &kp LEFT_CONTROL  &kp LEFT_ALT          &kp LEFT_GUI  &kp RIGHT_CONTROL  &tog 5              &kp H                  &kp J                  &kp K                  &kp L                  &kp SQT                &kp SEMICOLON
-&kp LSHFT                    &kp Z                  &kp X                  &kp C                  &kp V                  &kp B                                                            &none                 &none                                                &kp N                  &kp M                  &kp COMMA              &kp DOT                &QuestionMark          &kp RSHFT
-&tog 2                       &kp GRAVE              &kp CAPS               &kp LEFT               &kp RIGHT                                     &Space_Tab 4 BACKSPACE  &Space_Tab 4 TAB  &sk LEFT_CONTROL      &kp F11       &kp ENTER          &Space_Tab 5 SPACE                         &kp UP                 &kp DOWN               &kp LBKT               &kp RBKT               &mo 2
+&auto_shift LS(EQUAL) EQUAL  &auto_shift LS(N1) N1        &auto_shift LS(N2) N2  &auto_shift LS(N3) N3  &auto_shift LS(N4) N4  &auto_shift LS(N5) N5  &tog 1                                                                                                                    &mo 3          &auto_shift LS(N6) N6  &auto_shift LS(N7) N7  &auto_shift LS(N8) N8  &auto_shift LS(N9) N9      &auto_shift LS(N0) N0      &auto_shift LS(MINUS) MINUS
+&kp TAB                      &kp Q                        &kp W                  &kp E                  &kp R                  &kp T                  &mt LC(LS(V)) LC(V)                                                                                                       &kp LC(LS(Z))  &kp Y                  &kp U                  &kp I                  &kp O                      &kp P                      &auto_shift LS(BSLH) BSLH
+&kp ESCAPE                   &kp A                        &kp S                  &kp D                  &kp F                  &kp G                  &mt LC(X) LC(C)                           &kp LEFT_CONTROL  &kp LEFT_ALT           &kp LEFT_GUI       &kp RIGHT_CONTROL   &kp LC(Z)      &kp H                  &kp J                  &kp K                  &kp L                      &kp SQT                    &auto_shift LS(SEMICOLON) SEMICOLON
+&kp LSHFT                    &kp Z                        &kp X                  &kp C                  &kp V                  &kp B                                                                              &mt LS(HOME) HOME      &sk RIGHT_CONTROL                                     &kp N                  &kp M                  &kp COMMA              &kp DOT                    &QuestionMark              &kp RSHFT
+&tog 4                       &auto_shift LS(GRAVE) GRAVE  &kp CAPS               &kp LEFT               &kp RIGHT                                     &BackspaceDelete LC(BACKSPACE) BACKSPACE  &Space_Tab 4 TAB  &mt LS(END) END        &sk RIGHT_SHIFT    &Space_Tab 5 ENTER  &kp SPACE                             &kp UP                 &kp DOWN               &auto_shift LS(LBKT) LBKT  &auto_shift LS(RBKT) RBKT  &mo 2
             >;
         };
 
@@ -212,11 +210,11 @@
 
         ArrowKeys {
             bindings = <
-&trans  &trans              &trans          &trans            &trans          &trans        &trans                                                                                                    &trans  &trans             &trans             &trans             &trans               &trans           &trans
-&trans  &trans              &Spelling_Menu  &kp ENTER         &kp SPACE       &kp TAB       &trans                                                                                                    &trans  &trans             &kp LC(Z)          &mt LC(UP) UP      &trans               &trans           &trans
-&trans  &kp K_CONTEXT_MENU  &kp LEFT_ALT    &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp LEFT_GUI  &trans                                    &trans                              &trans      &trans  &trans  &trans  &mt LS(HOME) HOME  &mt LC(LEFT) LEFT  &mt LC(DOWN) DOWN  &mt LC(RIGHT) RIGHT  &mt LS(END) END  &trans
-&trans  &trans              &kp LC(X)       &kp LC(C)         &kp LC(V)       &trans                                                                                      &trans      &trans                  &trans             &kp PAGE_UP        &kp PAGE_DOWN      &trans               &trans           &trans
-&trans  &trans              &trans          &trans            &trans                        &BackspaceDelete LC(BACKSPACE) BACKSPACE  &BackspaceDelete LC(DELETE) DELETE  &trans      &trans  &trans  &trans                     &trans             &trans             &trans               &trans           &trans
+&trans  &trans              &trans          &trans            &trans          &trans        &trans                                                                  &trans  &trans             &trans             &trans             &trans               &trans           &trans
+&trans  &trans              &Spelling_Menu  &kp ENTER         &kp SPACE       &kp TAB       &trans                                                                  &trans  &trans             &kp LC(Z)          &mt LC(UP) UP      &trans               &trans           &trans
+&trans  &kp K_CONTEXT_MENU  &kp LEFT_ALT    &kp LEFT_CONTROL  &kp LEFT_SHIFT  &kp LEFT_GUI  &trans                              &trans  &trans      &trans  &trans  &trans  &mt LS(HOME) HOME  &mt LC(LEFT) LEFT  &mt LC(DOWN) DOWN  &mt LC(RIGHT) RIGHT  &mt LS(END) END  &trans
+&trans  &trans              &kp LC(X)       &kp LC(C)         &kp LC(V)       &trans                                                    &trans      &trans                  &trans             &kp PAGE_UP        &kp PAGE_DOWN      &trans               &trans           &trans
+&trans  &trans              &trans          &trans            &trans                        &BackspaceDelete LC(DELETE) DELETE  &trans  &trans      &trans  &trans  &trans                     &trans             &trans             &trans               &trans           &trans
             >;
         };
 
