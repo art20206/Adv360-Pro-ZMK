@@ -261,7 +261,7 @@
 &trans  &trans              &Spelling_Menu    &kp ENTER         &kp SPACE         &kp TAB           &trans                                      &trans  &trans                &trans                &kp UP                &trans                &trans                &trans
 &trans  &kp K_CONTEXT_MENU  &kp LEFT_ALT      &kp LEFT_CONTROL  &kp LEFT_SHIFT    &kp LEFT_GUI      &trans  &trans  &trans      &trans  &trans  &trans  &kp HOME              &kp LEFT              &kp DOWN              &kp RIGHT             &kp END               &trans
 &trans  &trans              &kp LC(X)         &kp LC(C)         &kp LC(V)         &trans                            &trans      &trans                  &trans                &kp PAGE_UP           &kp PAGE_DOWN         &trans                &trans                &trans
-&trans  &trans              &trans            &trans            &trans                              &trans  &trans  &tog 5      &trans  &trans  &trans                        &trans                &trans                &trans                &trans                &trans
+&trans  &trans              &trans            &trans            &trans                              &trans  &trans  &trans      &trans  &trans  &trans                        &trans                &trans                &trans                &trans                &trans
             >;
         };
 
